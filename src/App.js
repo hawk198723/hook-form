@@ -12,6 +12,7 @@ function App() {
   });
   const onSubmit = (data) => console.log(data);
   const firstName = watch("firstName");
+  const lastName = watch("lastName");
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -30,6 +31,7 @@ function App() {
           })}
           placeholder="Last Name"
         />
+        <p>{lastName}</p>
         <p>{errors.lastName?.message}</p>
         <select {...register("gender")}>
           <option value="female">female</option>
